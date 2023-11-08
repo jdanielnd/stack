@@ -29,7 +29,7 @@ processes:
       - "OTEL_SERVICE_NAME=dex"
 
   auth:
-    command: auth serve --listen 0.0.0.0:8083 --debug --config /etc/formance/auth/config.yaml --postgres-uri postgresql://formance:formance@postgres/auth?sslmode=disable --base-url http://api.crossfit.lol/api/auth --delegated-client-id gateway --delegated-client-secret ZXhhbXBsZS1hcHAtc2VjcmV0 --delegated-issuer http://localhost/api/auth/dex
+    command: auth serve --listen 0.0.0.0:8083 --debug --config /etc/formance/auth/config.yaml --postgres-uri postgresql://formance:formance@postgres/auth?sslmode=disable --base-url http://api.crossfit.lol/api/auth --delegated-client-id gateway --delegated-client-secret ZXhhbXBsZS1hcHAtc2VjcmV0 --delegated-issuer http://api.crossfit.lol/api/auth/dex
     availability:
       restart: always
     environment:

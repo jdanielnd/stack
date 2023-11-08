@@ -95,7 +95,7 @@
 
 (auth) {
 	auth {
-		issuer http://localhost/api/auth
+		issuer http://api.crossfit.lol/api/auth
 
 		read_key_set_max_retries 10
 	}

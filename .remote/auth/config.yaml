@@ -15,10 +15,10 @@ clients:
     secrets:
       - mysupersecret
     redirectUris:
-      - http://api.crossfit.lol:3000/auth/login
-      - http://api.crossfit.lol/auth/login
+      - http://localhost:3000/auth/login
+      - http://localhost/auth/login
       - https://oauth.pstmn.io/v1/callback
     name: control
     postLogoutRedirectUris:
-      - http://api.crossfit.lol:3000/auth/destroy
-      - http://api.crossfit.lol/auth/destroy
+      - http://localhost:3000/auth/destroy
+      - http://localhost/auth/destroy

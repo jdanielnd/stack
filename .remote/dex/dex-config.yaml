@@ -1,4 +1,4 @@
-issuer: http://api.crossfit.lol/api/auth/dex
+issuer: http://localhost/api/auth/dex
 
 storage:
   type: memory
@@ -26,8 +26,8 @@ oauth2:
 staticClients:
   - id: gateway
     redirectURIs:
-      - 'http://api.crossfit.lol:3000/auth/login'
-      - 'http://api.crossfit.lol/api/auth/authorize/callback'
+      - 'http://localhost:3000/auth/login'
+      - 'http://localhost/api/auth/authorize/callback'
     name: 'Auth Gateway'
     secret: ZXhhbXBsZS1hcHAtc2VjcmV0
 
@@ -49,4 +49,4 @@ connectors:
       # Credentials can be string literals or pulled from the environment.
       clientID: 47b0a0145f1879ccc5b0
       clientSecret: a52667786dfa5e2576679467711c7a97c5f3f1ae
-      redirectURI: http://api.crossfit.lol/api/auth/dex/callback
+      redirectURI: http://localhost/api/auth/dex/callback

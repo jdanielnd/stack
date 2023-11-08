@@ -117,8 +117,8 @@ processes:
     availability:
       restart: always
     environment:
-      - "API_URL=http://localhost/api"
-      - "REDIRECT_URI=http://localhost"
+      - "API_URL=http://api.crossfit.lol/api"
+      - "REDIRECT_URI=http://api.crossfit.lol"
       - "CLIENT_ID=control"
       - "CLIENT_SECRET=mysupersecret"
       - "ENCRYPTION_KEY=mysuperencryptionkey"

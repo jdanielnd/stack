@@ -29,7 +29,7 @@ processes:
       - "OTEL_SERVICE_NAME=dex"
 
   auth:
-    command: auth serve --listen 0.0.0.0:8083 --debug --config /etc/formance/auth/config.yaml --postgres-uri postgresql://formance:formance@postgres/auth?sslmode=disable --base-url http://api.crossfit.lol/api/auth --delegated-client-id gateway --delegated-client-secret ZXhhbXBsZS1hcHAtc2VjcmV0 --delegated-issuer http://api.crossfit.lol/api/auth/dex
+    command: auth serve --listen 0.0.0.0:8083 --debug --config /etc/formance/auth/config.yaml --postgres-uri postgresql://formance:formance@postgres/auth?sslmode=disable --base-url http://localhost/api/auth --delegated-client-id gateway --delegated-client-secret ZXhhbXBsZS1hcHAtc2VjcmV0 --delegated-issuer http://api.crossfit.lol/api/auth/dex
     availability:
       restart: always
     environment:
@@ -43,7 +43,7 @@ processes:
       - "OTEL_SERVICE_NAME=ledger"
 
   wallets:
-    command: wallets server --listen 0.0.0.0:8081 --stack-url http://api.crossfit.lol --stack-client-id wallets --stack-client-secret wallets
+    command: wallets server --listen 0.0.0.0:8081 --stack-url http://localhost --stack-client-id wallets --stack-client-secret wallets
     availability:
       restart: always
     environment:
@@ -90,7 +90,7 @@ processes:
       - "OTEL_SERVICE_NAME=webhooks"
 
   orchestration:
-    command: orchestration serve --listen 0.0.0.0:8086 --postgres-dsn postgresql://formance:formance@postgres/orchestration?sslmode=disable --temporal-address temporalite:7233 --stack-url http://api.crossfit.lol --stack-client-id orchestration --stack-client-secret orchestration --worker
+    command: orchestration serve --listen 0.0.0.0:8086 --postgres-dsn postgresql://formance:formance@postgres/orchestration?sslmode=disable --temporal-address temporalite:7233 --stack-url http://localhost --stack-client-id orchestration --stack-client-secret orchestration --worker
     availability:
       restart: always
     environment:

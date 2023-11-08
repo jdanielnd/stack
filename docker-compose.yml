@@ -24,7 +24,7 @@ services:
       opensearch:
         condition: service_healthy
     volumes:
-      - ./.local:/etc/formance
+      - ./.remote:/etc/formance
       - ./components/search/benthos:/benthos
       - ./components/auth/pkg/web:/app/web
     ports:
@@ -68,7 +68,7 @@ services:
       PGDATA: "/data/postgres"
     volumes:
       - postgres_data:/data/postgres
-      - ./.local/postgres:/docker-entrypoint-initdb.d
+      - ./.remote/postgres:/docker-entrypoint-initdb.d
 
   opensearch:
     platform: linux/x86_64
